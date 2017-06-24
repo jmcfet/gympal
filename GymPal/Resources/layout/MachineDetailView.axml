@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/machineImageView"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:text="Machine Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/machineName"
+        android:paddingTop="20dp"
+        android:textSize="20dp"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:text="Short Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shortDescription"
+        android:textColor="@android:color/black"
+        android:paddingTop="20dp"
+        android:textSize="16dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut nisi egestas, auctor arcu quis, tristique urna. Nunc et rutrum nunc, commodo feugiat nisi. Fusce pharetra sollicitudin sapien, nec facilisis risus consectetur vel. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent dignissim tincidunt felis, eget tempus ligula egestas vel. Donec massa est, luctus eget facilisis eu, faucibus eu elit. Suspendisse potenti. Cras aliquam lectus ut elit varius consectetur. Proin lacinia ante at euismod elementum. Fusce dictum mauris eu sagittis facilisis. Vivamus a dignissim enim, id luctus leo."
+        android:editable="False"
+        android:textColor="@android:color/black"
+        android:paddingTop="20dp"
+        android:textSize="12dp" />
+</LinearLayout>
