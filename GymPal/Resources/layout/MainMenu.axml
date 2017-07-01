@@ -14,10 +14,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/listallButton" />
     <Button
-        android:text="View your cart"
+        android:text="Routine Builder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cartButton" />
+        android:id="@+id/buildRoutine" />
     <Button
         android:text="Take a picture with Ray"
         android:layout_width="match_parent"

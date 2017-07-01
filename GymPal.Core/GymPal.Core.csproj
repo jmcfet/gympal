@@ -36,6 +36,7 @@
     <Compile Include="Data\Repository.cs" />
     <Compile Include="Models\Machines.cs" />
     <Compile Include="Models\Routine.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\GympalService.cs" />
   </ItemGroup>

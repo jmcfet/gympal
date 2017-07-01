@@ -56,10 +56,23 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\..\..\..\Users\jmcfe\OneDrive\Documents\Visual Studio 2017\Projects\App10\App10\bin\Debug\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\..\..\..\Users\jmcfe\OneDrive\Documents\Visual Studio 2017\Projects\App10\App10\bin\Debug\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\..\..\..\Users\jmcfe\OneDrive\Documents\Visual Studio 2017\Projects\App10\App10\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\..\..\..\Users\jmcfe\OneDrive\Documents\Visual Studio 2017\Projects\App10\App10\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\AllMachinesAdapter.cs" />
     <Compile Include="AllMachinesActivity.cs" />
+    <Compile Include="BuildRoutine.cs" />
     <Compile Include="MachineDetail.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -79,7 +92,12 @@
     <AndroidResource Include="Resources\layout\MainMenu.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\MachineDetailView.axml" />
+    <AndroidResource Include="Resources\layout\MachineDetailView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\BuildRoutine.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -106,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\john.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\RoutinesMenu.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

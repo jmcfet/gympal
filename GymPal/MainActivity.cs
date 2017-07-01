@@ -17,7 +17,7 @@ namespace GymPal
     public class MenuActivity : Activity
     {
         private Button listallButton;
-        private Button cartButton;
+        private Button buildRoutineButton;
         private Button aboutButton;
         private Button mapButton;
         private Button takePictureButton;
@@ -36,24 +36,22 @@ namespace GymPal
         private void FindViews()
         {
             listallButton = FindViewById<Button>(Resource.Id.listallButton);
-            cartButton = FindViewById<Button>(Resource.Id.cartButton);
-            aboutButton = FindViewById<Button>(Resource.Id.aboutButton);
-            mapButton = FindViewById<Button>(Resource.Id.mapButton);
-            takePictureButton = FindViewById<Button>(Resource.Id.takePictureButton);
-        }
+            buildRoutineButton = FindViewById<Button>(Resource.Id.buildRoutine);
+            
+         }
 
         private void HandleEvents()
         {
             listallButton.Click += listallButton_Click;
-            aboutButton.Click += AboutButton_Click;
-            takePictureButton.Click += TakePictureButton_Click;
-            mapButton.Click += MapButton_Click;
+            buildRoutineButton.Click += buildButton_Click;
+
+
         }
 
-        private void TakePictureButton_Click(object sender, EventArgs e)
+        private void buildButton_Click(object sender, EventArgs e)
         {
-      //      var intent = new Intent(this, typeof(TakePictureActivity));
-      //      StartActivity(intent);
+            var intent = new Intent(this, typeof(BuildRoutine));
+            StartActivity(intent);
         }
 
         private void AboutButton_Click(object sender, EventArgs e)

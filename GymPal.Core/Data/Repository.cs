@@ -48,6 +48,11 @@ namespace GymPal.Core.Data
                  }
             }
         };
+        private static List<User> Users = new List<User>()
+        {
+            new User(){ id = 1, Email="jmcfet@bellsouth.net", Password="test" },
+            new User(){ id = 2, Email="foo@bellsouth.net", Password="test" }
+        };
         public List<Routine> GetRoutines()
         {
             return Routines;
@@ -60,6 +65,10 @@ namespace GymPal.Core.Data
 
                 select machine;
             return machines.ToList<Machine>();
+        }
+        public User isUserValid(string userid, string password)
+        {
+            return Users.Where(u => u.Email == userid && u.Password == password).SingleOrDefault();
         }
     }
 }
