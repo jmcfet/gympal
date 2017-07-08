@@ -73,6 +73,7 @@
     <Compile Include="Adapters\AllMachinesAdapter.cs" />
     <Compile Include="AllMachinesActivity.cs" />
     <Compile Include="BuildRoutine.cs" />
+    <Compile Include="GetNameDialog.cs" />
     <Compile Include="MachineDetail.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -96,6 +97,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\BuildRoutine.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\GetName.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

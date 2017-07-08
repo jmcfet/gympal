@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <!--///showAsAction="always" ///-->
-  <item android:id="@+id/action_settings" android:title="Add" showAsAction="always" />
+  <item android:id="@+id/Add" android:title="Add" showAsAction="always" />
   <item android:id="@+id/action_settings1" android:title="Bluetooth" showAsAction="always" />
   <item android:id="@+id/action_settings2" android:title="Exit" showAsAction="always" />
   <!--/android:showAsAction="ifRoom"/-->

@@ -26,5 +26,28 @@ namespace GymPal
             MenuInflater.Inflate(Resource.Menu.RoutinesMenu, menu);
             return true;
         }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.Add:
+                    {
+                        // add your code  
+                        return true;
+                    }
+                //case Resource.Id.menuItem2:
+                //    {
+                //        // add your code  
+                //        return true;
+                //    }
+                //case Resource.Id.menuItem3:
+                //    {
+                //        // add your code  
+                //        return true;
+                //    }
+            }
+
+            return base.OnOptionsItemSelected(item);
+        }
     }
 }
