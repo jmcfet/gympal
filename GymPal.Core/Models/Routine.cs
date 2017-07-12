@@ -13,6 +13,6 @@ namespace GymPal.Core.Models
         public int? userid { get; set; }
         public int? cloned { get; set; }
         //      [JsonIgnore]
-        public ICollection<Machine> Machines { get; set; }
+        public List<Machine> Machines { get; set; }
     }
 }

@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\AllMachinesAdapter.cs" />
+    <Compile Include="Adapters\AllRoutinesAdapter.cs" />
     <Compile Include="AllMachinesActivity.cs" />
     <Compile Include="BuildRoutine.cs" />
     <Compile Include="GetNameDialog.cs" />
@@ -78,6 +79,8 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoutineEditor.cs" />
+    <Compile Include="selectMachines.cs" />
     <Compile Include="Utility\ImageHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +103,21 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\GetName.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MachinewithCheck.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RoutineRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RoutineEditor.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\toolbar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\selectMachines.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -130,7 +148,12 @@
     <AndroidResource Include="Resources\drawable\john.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\menu\RoutinesMenu.xml" />
+    <AndroidResource Include="Resources\menu\RoutinesMenu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

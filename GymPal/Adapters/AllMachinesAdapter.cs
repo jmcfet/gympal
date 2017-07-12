@@ -47,26 +47,38 @@ namespace GymPal.Adapters
             return position;
         }
 
-        public  override View GetView(int position, View convertView, ViewGroup parent)
+        public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = machines[position];
-                     
+
             // Remove the file extention from the image filename
             Android.Content.Res.Resources res = context.Resources;
-         
+
             BitmapFactory.Options options = ImageHelper.GetBitmapOptionsOfImage(res, item.PictureUrl);
             // Converting Drawable Resource to Bitmap
-            Bitmap bitmapToDisplay = ImageHelper.LoadScaledDownBitmapForDisplay(res, options, 150, 150,item.PictureUrl);
-      
+            Bitmap bitmapToDisplay = ImageHelper.LoadScaledDownBitmapForDisplay(res, options, 150, 150, item.PictureUrl);
+
             if (convertView == null)
             {
-                convertView = context.LayoutInflater.Inflate(Resource.Layout.MachineListRow, null);
+                if (this.context.GetType() == typeof(BuildRoutine) || this.context.GetType() == typeof(selectMachines))
+                {
+                    convertView = context.LayoutInflater.Inflate(Resource.Layout.MachinewithCheck, null);
+                    convertView.FindViewById<TextView>(Resource.Id.MachineName1).Text = item.Name;
+                    convertView.FindViewById<TextView>(Resource.Id.shortDescription1).Text = item.shortDesc;
+                    //    convertView.FindViewById<ImageView>(Android.Resource.Id.Icon).;
+                    convertView.FindViewById<ImageView>(Resource.Id.machineIcon1).SetImageBitmap(bitmapToDisplay);
+                }
+                else
+                {
+                    convertView = context.LayoutInflater.Inflate(Resource.Layout.MachineListRow, null);
+                    convertView.FindViewById<TextView>(Resource.Id.MachineName).Text = item.Name;
+                    convertView.FindViewById<TextView>(Resource.Id.shortDescription).Text = item.shortDesc;
+                    //    convertView.FindViewById<ImageView>(Android.Resource.Id.Icon).;
+                    convertView.FindViewById<ImageView>(Resource.Id.machineIcon).SetImageBitmap(bitmapToDisplay);
+                }
+            
             }
-
-            convertView.FindViewById<TextView>(Resource.Id.MachineName).Text = item.Name;
-            convertView.FindViewById<TextView>(Resource.Id.shortDescription).Text = item.shortDesc;
-            //    convertView.FindViewById<ImageView>(Android.Resource.Id.Icon).;
-            convertView.FindViewById<ImageView>(Resource.Id.machineIcon).SetImageBitmap(bitmapToDisplay);
+                   
             return convertView;
         }
 

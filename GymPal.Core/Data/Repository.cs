@@ -9,14 +9,8 @@ namespace GymPal.Core.Data
 {
     public class Repository
     {
-        private static List<Routine> Routines = new List<Routine>()
+        private static List<Machine> machines = new List<Machine>()
         {
-            new Routine()
-            {
-                 Name = "group1",
-                 id = 1,
-                 userid = 2,
-                 Machines = new  List<Machine>(){
 
                         new Machine()
                         {
@@ -24,7 +18,7 @@ namespace GymPal.Core.Data
                               Name = "machine1",
                               PictureUrl="IMG_1039",
                                BeginDesc = "start nn",
-                               shortDesc = "blshb blsh" 
+                               shortDesc = "blshb blsh"
 
                         },
                         new Machine()
@@ -45,7 +39,17 @@ namespace GymPal.Core.Data
                                shortDesc = "blshb blsh"
 
                         }
-                 }
+
+        };
+        private static List<Routine> Routines = new List<Routine>()
+        {
+            new Routine()
+            {
+                 Name = "group1",
+                 id = 1,
+                 userid = 2,
+                 Machines = new  List<Machine>(){machines[0] }
+
             }
         };
         private static List<User> Users = new List<User>()
@@ -59,11 +63,11 @@ namespace GymPal.Core.Data
         }
         public List<Machine> GetAllMachines()
         {
-            IEnumerable<Machine> machines =
-                from Routine in Routines
-                from machine in Routine.Machines
+            //IEnumerable<Machine> machines =
+            //    from Routine in Routines
+            //    from machine in Routine.Machines
 
-                select machine;
+            //    select machine;
             return machines.ToList<Machine>();
         }
         public User isUserValid(string userid, string password)

@@ -21,7 +21,11 @@ namespace GymPal
             get { return mname; }
             set { mname = value; }
         }
-       
+        public OnNameEventArgs(string name) : base()
+        {
+            mname = name;
+            
+        }
     }
     class GetNameDialog : DialogFragment
     {
@@ -30,12 +34,20 @@ namespace GymPal
         public event EventHandler<OnNameEventArgs> mOnsignupDone;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            base.OnCreateView(inflater, container, savedInstanceState);
             var view = inflater.Inflate(Resource.Layout.GetName, container, false);
             txtEmail = view.FindViewById<EditText>(Resource.Id.RoutineName);
             btnOK = view.FindViewById<Button>(Resource.Id.Ok);
-   //         btnSignup.Click += BtnSignup_Click;
-            return base.OnCreateView(inflater, container, savedInstanceState);
+            btnOK.Click += BtnOK_Click;
+            //         btnSignup.Click += BtnSignup_Click;
+            return view;
 
+        }
+
+        private void BtnOK_Click(object sender, EventArgs e)
+        {
+            mOnsignupDone.Invoke(this, new OnNameEventArgs(txtEmail.Text));
+            this.Dismiss();
         }
     }
 }
