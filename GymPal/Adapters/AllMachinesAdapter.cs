@@ -17,10 +17,31 @@ using Android.Content.Res;
 
 namespace GymPal.Adapters
 {
+    public class MachineCheckEventArgs : EventArgs
+    {
+        string mname;
+        bool m_state;
+        public string mName
+        {
+            get { return mname; }
+            set { mname = value; }
+        }
+        public bool state
+        {
+            get { return m_state; }
+            set { m_state = value; }
+        }
+        public MachineCheckEventArgs(string name) : base()
+        {
+            mname = name;
+
+        }
+    }
     public class AllMachinesAdapter : BaseAdapter<Machine>
     {
         List<Machine> machines;
         Activity context;
+        public event EventHandler<MachineCheckEventArgs> selectDone;
         public AllMachinesAdapter(Activity context, List<Machine> items) : base()
         {
             this.context = context;
@@ -67,6 +88,9 @@ namespace GymPal.Adapters
                     convertView.FindViewById<TextView>(Resource.Id.shortDescription1).Text = item.shortDesc;
                     //    convertView.FindViewById<ImageView>(Android.Resource.Id.Icon).;
                     convertView.FindViewById<ImageView>(Resource.Id.machineIcon1).SetImageBitmap(bitmapToDisplay);
+                    CheckBox check = convertView.FindViewById<CheckBox>(Resource.Id.selectMachineCheck);
+                    check.SetTag(Resource.Id.selectMachineCheck, item.Name);
+                    check.Click += AllMachinesAdapter_Click;
                 }
                 else
                 {
@@ -81,9 +105,16 @@ namespace GymPal.Adapters
                    
             return convertView;
         }
-
-       
-       
-
+        //user checked a box so broadcast ann event
+        private void AllMachinesAdapter_Click(object sender, EventArgs e)
+        {
+            CheckBox box = sender as CheckBox;
+            if (box.Checked == true)
+            {
+                string machineName = (string)box.GetTag(Resource.Id.selectMachineCheck);
+                selectDone.Invoke(this, new MachineCheckEventArgs(machineName));
+            }
+            
+        }
     }
 }

@@ -1774,6 +1774,9 @@ namespace GymPal
 			// aapt resource value: 0x7f060076
 			public const int Cancel = 2131099766;
 			
+			// aapt resource value: 0x7f06009c
+			public const int DoneSelect = 2131099804;
+			
 			// aapt resource value: 0x7f06007d
 			public const int MachineName = 2131099773;
 			
@@ -1873,9 +1876,6 @@ namespace GymPal
 			// aapt resource value: 0x7f06002d
 			public const int center_vertical = 2131099693;
 			
-			// aapt resource value: 0x7f06007e
-			public const int checkBox1 = 2131099774;
-			
 			// aapt resource value: 0x7f060052
 			public const int checkbox = 2131099730;
 			
@@ -1906,8 +1906,8 @@ namespace GymPal
 			// aapt resource value: 0x7f060040
 			public const int default_activity_button = 2131099712;
 			
-			// aapt resource value: 0x7f06009c
-			public const int delete = 2131099804;
+			// aapt resource value: 0x7f06009d
+			public const int delete = 2131099805;
 			
 			// aapt resource value: 0x7f06007b
 			public const int description = 2131099771;
@@ -2127,6 +2127,9 @@ namespace GymPal
 			
 			// aapt resource value: 0x7f060067
 			public const int search_voice_btn = 2131099751;
+			
+			// aapt resource value: 0x7f06007e
+			public const int selectMachineCheck = 2131099774;
 			
 			// aapt resource value: 0x7f060068
 			public const int select_dialog_listview = 2131099752;
